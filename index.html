@@ -12,23 +12,23 @@
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
+            background-color: #f7f7f7;
             color: #333;
         }
 
         header {
-            background: linear-gradient(135deg, #00509e, #003366);
+            background: linear-gradient(135deg, #34495e, #2ecc71);
             color: white;
             text-align: center;
-            padding: 40px 20px;
+            padding: 50px 20px;
             position: relative;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         header h1 {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             margin: 0;
-            font-weight: 600;
+            font-weight: 700;
         }
 
         header p {
@@ -36,13 +36,12 @@
             margin: 10px 0 0;
         }
 
-        /* Photo de profil */
         .profile-photo {
             position: absolute;
             top: 20px;
             right: 20px;
-            width: 80px;
-            height: 80px;
+            width: 90px;
+            height: 90px;
             border-radius: 50%;
             border: 3px solid white;
             overflow: hidden;
@@ -58,12 +57,13 @@
         nav {
             display: flex;
             justify-content: center;
-            background-color: #003366;
+            background-color: #2ecc71;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         nav a {
             color: white;
-            padding: 15px 20px;
+            padding: 15px 25px;
             text-decoration: none;
             text-transform: uppercase;
             font-weight: 600;
@@ -71,22 +71,22 @@
         }
 
         nav a:hover {
-            background-color: #00509e;
+            background-color: #27ae60;
             transform: scale(1.1);
         }
 
         .container {
-            max-width: 1200px;
-            margin: 20px auto;
+            max-width: 1100px;
+            margin: 30px auto;
             padding: 20px;
             background-color: white;
             border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
 
         h2 {
-            font-size: 2rem;
-            color: #00509e;
+            font-size: 2.2rem;
+            color: #34495e;
             text-align: center;
             margin-bottom: 20px;
             position: relative;
@@ -94,9 +94,9 @@
 
         h2::after {
             content: "";
-            width: 80px;
+            width: 100px;
             height: 4px;
-            background: linear-gradient(135deg, #cc0000, #ff4d4d);
+            background: linear-gradient(135deg, #2ecc71, #27ae60);
             display: block;
             margin: 10px auto;
             border-radius: 2px;
@@ -117,31 +117,31 @@
         }
 
         ul li {
-            background: #f4f4f4;
+            background: #f9f9f9;
             margin-bottom: 15px;
             padding: 15px;
-            border-left: 5px solid #00509e;
+            border-left: 5px solid #2ecc71;
             border-radius: 5px;
         }
 
         ul li:hover {
-            background: #e6f0ff;
+            background: #ecf9ec;
         }
 
         .contact a {
-            color: #cc0000;
+            color: #27ae60;
             font-weight: bold;
             text-decoration: none;
             transition: color 0.3s ease;
         }
 
         .contact a:hover {
-            color: #ff4d4d;
+            color: #2ecc71;
         }
 
         footer {
             text-align: center;
-            background-color: #00509e;
+            background-color: #34495e;
             color: white;
             padding: 20px;
             margin-top: 40px;
@@ -151,7 +151,23 @@
             margin: 0;
         }
 
-        /* Animations */
+        #typewriter {
+            font-size: 1.5rem;
+            color: #27ae60;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        /* Balle interactive */
+        #ball {
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            background: #27ae60;
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -163,38 +179,19 @@
             }
         }
 
-        /* Typing effect */
-        #typewriter {
-            font-size: 1.5rem;
-            text-align: center;
-            color: #00509e;
-            margin-top: 20px;
-        }
-
-        /* Balle interactive */
-        #ball {
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            background: red;
-            border-radius: 50%;
-            pointer-events: none;
-        }
-
-        /* Responsive */
         @media (max-width: 768px) {
-            h2 {
-                font-size: 1.5rem;
+            header h1 {
+                font-size: 2rem;
             }
 
             nav a {
-                padding: 10px 15px;
                 font-size: 0.9rem;
+                padding: 10px 15px;
             }
 
             .profile-photo {
-                width: 60px;
-                height: 60px;
+                width: 70px;
+                height: 70px;
             }
         }
     </style>
@@ -205,7 +202,7 @@
             <img src="new_photo.jpg" alt="Photo de profil">
         </div>
         <h1>Portfolio CV - Hippolyte Ruyant</h1>
-        <p>Étudiant en Licence de Commercialisation des Produits et Services Sportifs</p>
+        <p>Étudiant en recherche de Master en Business</p>
         <div id="typewriter"></div>
     </header>
 
@@ -220,7 +217,7 @@
     <div class="container">
         <div id="about" class="section active">
             <h2>À Propos</h2>
-            <p>Bonjour, je m'appelle Hippolyte Ruyant. Je suis actuellement étudiant en Licence Professionnelle CPSS à l'ILEPS, à la recherche d'une alternance dans les domaines du sport, de la communication et de l'événementiel.</p>
+            <p>Bonjour, je m'appelle Hippolyte Ruyant. Je suis actuellement étudiant en Licence Professionnelle CPSS à l'ILEPS. Je recherche un Master spécialisé en Business pour développer mes compétences en gestion, marketing et stratégie.</p>
         </div>
 
         <div id="experience" class="section">
@@ -274,7 +271,7 @@
     </footer>
 
     <script>
-        // Animation d'accueil (typing effect)
+        // Animation typing
         const text = "Bienvenue sur mon Portfolio - Hippolyte Ruyant !";
         let index = 0;
         function typeEffect() {
@@ -293,17 +290,17 @@
             ball.style.left = e.clientX + "px";
         });
 
-        // Navigation des sections
+        // Navigation sections
         document.querySelectorAll('.nav-link').forEach(link => {
             link.addEventListener('click', function(e) {
                 e.preventDefault();
                 document.querySelectorAll('.section').forEach(section => {
                     section.classList.remove('active');
                 });
-                document.getElementById(this.dataset.target).classList.add('active');
+                const target = document.getElementById(this.dataset.target);
+                target.classList.add('active');
             });
         });
     </script>
 </body>
 </html>
-
