@@ -48,8 +48,7 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        .profile-photo img src="IMG_0555.jpeg" alt="Photo de profil" class="profile-photo">
-        
+        .profile-photo img {
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -159,16 +158,6 @@
             text-align: center;
         }
 
-        /* Balle interactive */
-        #ball {
-            position: absolute;
-            width: 15px;
-            height: 15px;
-            background: #27ae60;
-            border-radius: 50%;
-            pointer-events: none;
-        }
-
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -194,6 +183,13 @@
                 width: 70px;
                 height: 70px;
             }
+        }
+
+        /* Ajout de couleur pour les sections */
+        .section {
+            background-color: #ecf9ec;
+            border-radius: 5px;
+            padding: 15px;
         }
     </style>
 </head>
@@ -284,13 +280,6 @@
         }
         window.onload = typeEffect;
 
-        // Balle interactive
-        document.addEventListener("mousemove", (e) => {
-            const ball = document.getElementById("ball");
-            ball.style.top = e.clientY + "px";
-            ball.style.left = e.clientX + "px";
-        });
-
         // Navigation sections
         document.querySelectorAll('.nav-link').forEach(link => {
             link.addEventListener('click', function(e) {
@@ -305,4 +294,3 @@
     </script>
 </body>
 </html>
-<link rel="stylesheet" href="styles.css">
